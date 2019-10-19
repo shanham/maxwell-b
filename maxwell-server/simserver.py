@@ -143,7 +143,7 @@ def main():
                 out_files[i] = open(out_file_log, 'w')
                 logger.debug('Outputing to log file: {0}'.format(out_file_log))
 
-                command = ('mpirun -n ' + str(gpus_per_solve) + ' python ' +
+                command = ('mpirun -n ' + str(gpus_per_solve) + ' python3 ' +
                            path_to_solver_dir + 'fdfd.py ' +
                            os.path.join(maxwell_config.path, solve_paths[i]))
                 logger.debug('Running command {0}'.format(command))
